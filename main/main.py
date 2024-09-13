@@ -92,7 +92,7 @@ def getRecentlyPlayed(token):
         print(f"Error parsing response: {e}")
         return None
 
-# Execute authorization and fetch songs
+# execute authorization and fetch songs
 authCode = getAuthorization()
 if authCode:
     accessToken, refresh_token = getToken(authCode)
