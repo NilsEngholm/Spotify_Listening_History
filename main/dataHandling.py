@@ -1,5 +1,6 @@
 import pandas as pd
 import json
+import sqlalchemy
 
 jsonFile = 'main\\data\\test.json'
 
