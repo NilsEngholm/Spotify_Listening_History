@@ -12,7 +12,8 @@ def jsonToDataframe(jsonFile):
     
     return df
 
-df = jsonToDataframe(jsonFile)
-songNames = df['track.name']
-timePlayed = df['played_at']
-print(f"{songNames} {timePlayed}")
+rawdf = jsonToDataframe(jsonFile)
+allColumns = rawdf.columns
+
+df = rawdf[['track.name', 'played_at', 'track.id']]
+print(df)
